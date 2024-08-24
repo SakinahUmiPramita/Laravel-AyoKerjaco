@@ -1,0 +1,643 @@
+/* Default Styles */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo img {
+    width: 150px;
+}
+
+.header .nav-menu {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Mengambil ruang kosong */
+    justify-content: center; /* Menu di tengah */
+}
+
+.header .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.header .nav-menu ul li {
+    display: inline;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #878787;
+    padding: 0px 10px;
+    margin-top: 1px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active{
+    background-color: #00b300;
+    color: #fff;
+    border-radius: 5px;
+}
+/* Dropdown Styles */
+.nav-menu .dropdown {
+    position: relative;
+    color: #00b300;
+}
+
+.nav-menu .dropdown > a {
+    display: inline-block;
+    text-decoration: none;
+    color: #878787;
+    position: relative;
+}
+
+.nav-menu .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 200px;
+    z-index: 1000;
+}
+
+.nav-menu .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-menu .dropdown-content a:hover {
+    background-color: #f8f9fa;
+}
+
+/* Show Dropdown on Hover */
+.nav-menu .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.auth-buttons button {
+    padding: 5px 20px;
+    background-color: transparent;
+    color: #00b300;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    outline: none;
+}
+
+.btn-login {
+    padding: 5px 20px;
+    border: 2px solid #00b300;
+    background-color: transparent;
+    color: #00b300;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    outline: none;
+}
+
+.btn-login:hover {
+    background-color: #00b300;
+    color: #fff;
+}
+
+.btn-company {
+    font-size: 16px;
+    color: #00b300;
+    border: 2px solid #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-company:hover {
+    text-decoration: underline;
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #e9ecef;
+    margin: 20px 0;
+}
+
+.search-section input {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-section .btn-search {
+    padding: 10px 20px;
+    border: none;
+    background-color: #263141;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Recommendation Section */
+.recommendation-section {
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.recommendation-banner {
+    background-color: #d4edda;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.recommendation-banner p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.recommendation-banner .btn-fill-profile {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recommendation-preference {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.recommendation-preference img {
+    width: 200px;
+}
+
+.recommendation-preference div p {
+    font-weight: bold;
+}
+
+.recommendation-preference a {
+    text-decoration: none;
+}
+
+.recommendation-preference .btn-fill-preference {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recommendation-preference select {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    width: 100%;
+}
+
+.recommendation-preference select.active {
+    background-color: #28a745; /* Warna hijau saat aktif */
+    color: #fff;
+    border-color: #28a745;
+}
+
+
+/* Job Categories */
+.job-categories {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.job-categories h2 {
+    margin-bottom: 20px;
+}
+
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.category-buttons button {
+    padding: 10px 20px;
+    border: 1px solid #28a745;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.category-buttons button:hover {
+    background-color: #28a745; /* Green on hover */
+    color: #fff;
+    border-color: #28a745;
+}
+
+.category-buttons button.active {
+    background-color: #28a745; /* Green when active */
+    color: #fff;
+    border-color: #28a745;
+}
+
+/* Additional cursor and click feedback */
+.category-buttons button:active {
+    transform: scale(0.98);
+    background-color: #28a745; /* Ensure green color when clicked */
+    color: #fff;
+}
+
+.category-buttons button.active {
+    background-color: #28a745; /* Warna hijau */
+    color: white;
+}
+
+/* Tambahkan ini di file style.css */
+.category-buttons button.active {
+    background-color: green;
+    color: white;
+    border-color: green;
+}
+
+/* Favorite Industries */
+.favorite-industries {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.favorite-industries h2 {
+    margin-bottom: 20px;
+}
+
+.industry-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.industry-buttons button {
+    padding: 10px 20px;
+    border: 1px solid #D7F0DA;
+    background-color: #D7F0DA;
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.industry-buttons button:hover {
+    background-color: #28a745; /* Green on hover */
+    color: #fff;
+    border-color: #28a745;
+}
+
+.industry-buttons button.active {
+    background-color: #28a745; /* Green when active */
+    color: #fff;
+    border-color: #28a745;
+}
+
+/* Additional cursor and click feedback */
+.industry-buttons button:active {
+    transform: scale(0.98);
+    background-color: #28a745; /* Ensure green color when clicked */
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    width: 75%;
+}
+
+.footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .footer-links ul li {
+    margin-bottom: 20px;
+}
+
+.footer .footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer .footer-social {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.footer .footer-social h3 {
+    margin-bottom: 10px;
+}
+
+.footer .footer-social img {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensures the modal is on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Responsive width */
+    max-width: 600px; /* Maximum width */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-description {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        background-color: #fff;
+        width: 100%;
+        transition: all 0.3s ease;
+        padding: 20px;
+    }
+
+    .nav-menu ul.active {
+        left: 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .auth-buttons {
+        display: none;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .recommendation-preference {
+        flex-direction: column;
+    }
+
+    .recommendation-preference img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive Menu - Move to Bottom */
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #fff;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu ul {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    .nav-menu ul li a {
+        padding: 10px 5px;
+    }
+}
+
+/* Modal Buttons */
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.btn-submit {
+    background-color: #07A419;
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background-color: #07A419;
+}
+
+.btn-cancel {
+    background-color: #fa0000;
+    color: #fff;
+}
+
+.btn-cancel:hover {
+    background-color: #5a6268;
+}
+
+.nav-menu .menu-item.active {
+    background-color: #00b300; /* Warna hijau */
+    color: #fff; /* Warna teks putih */
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.nav-menu .dropdown-content a.active,
+.nav-menu .dropdown-content a:hover {
+    background-color: #00b300; /* Warna hijau saat hover atau aktif */
+    color: #fff; /* Warna teks putih */
+}
+
+.nav-menu .menu-item {
+    text-decoration: none;
+    color: #878787; /* Warna teks default */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu .menu-item:hover {
+    background-color: #00b300; /* Warna hijau saat hover */
+    color: #fff; /* Warna teks putih saat hover */
+}
+
+.nav-menu .menu-item.active {
+    background-color: #00b300; /* Warna hijau saat aktif */
+    color: #fff; /* Warna teks putih saat aktif */
+}
+
+
+.select2-placeholder {
+    color: #888;
+    font-style: italic;
+}
+
